@@ -1,0 +1,55 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+!gradle-wrapper.properties
+
+# Local config
+local.properties
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Android
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+
+# Kotlin
+*.hprof
+
+# Signing / secrets (NEVER commit these)
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+*.pem
+*.gpg
+local.secrets
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Detekt/Ktlint baseline caches
+.detekt/
+.ktlint/
+
+# Benchmark output
+*/build/outputs/connected_android_test_additional_output/
+
+# Binary compatibility validator dumps (keep committed .api files, ignore temp)
+*.api.new
