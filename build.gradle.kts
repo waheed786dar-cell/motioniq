@@ -6,12 +6,22 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.ktlint) apply false
     alias(libs.plugins.dokka)
+    id("jacoco")
 }
 
 subprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
+    apply(plugin = "jacoco")
+
+    configure<JacocoPluginExtension> {
+        toolVersion = "0.8.12"
+    }
 }
 
 tasks.register("detektAll") {
     dependsOn(subprojects.map { "${it.path}:detekt" })
+}
+
+tasks.register("jacocoTestReport") {
+    dependsOn(subprojects.map { "${it.path}:test" })
 }
