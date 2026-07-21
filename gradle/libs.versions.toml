@@ -14,7 +14,7 @@ detekt = "1.23.7"
 ktlint-gradle = "12.1.2"
 dokka = "1.9.20"
 bcv = "0.16.3"
-core-ktx = "1.15.0"
+core-ktx = "1.19.0"
 
 [libraries]
 kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
