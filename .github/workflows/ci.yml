@@ -32,7 +32,7 @@ jobs:
           java-version: ${{ matrix.jdk }}
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v6
         with:
           cache-read-only: false
 
@@ -81,7 +81,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v6
 
       - name: Verify compile against minSdk/targetSdk boundary (API ${{ matrix.api-level }})
         run: ./gradlew :motioniq-core:compileDebugKotlin :motioniq-compose:compileDebugKotlin :motioniq-views:compileDebugKotlin
@@ -106,7 +106,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v6
 
       - name: Build for CodeQL
         run: ./gradlew assembleDebug -x test -x lint
